@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d19">
+  <title>Генератор нашей вселенной</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="space" aria-hidden="true"><div class="nebula nebula-a"></div><div class="nebula nebula-b"></div><div class="planet planet-a"></div><div class="planet planet-b"></div></div>
+<main class="app">
+  <header class="topbar"><a class="brand" href="#" aria-label="Генератор нашей вселенной"><span class="brand-star">✳</span><span>КСЕНИЯ<br>КОСМОС</span></a><div class="signal"><i></i> ЛАБОРАТОРИЯ ВАРИАНТОВ</div><button class="history-toggle" id="history-button" type="button"><span>▤</span> ИСТОРИЯ <b id="history-count">0</b></button></header>
+  <section class="intro" id="intro"><div class="eyebrow"><span></span> ЭКСПЕРИМЕНТ №05 <i>·</i> ЛОКАЛЬНАЯ ВСЕЛЕННАЯ</div><h1>ГЕНЕРАТОР<br><em>НАШЕЙ ВСЕЛЕННОЙ</em></h1><p>Некоторые вселенные возникают сами.<br>Эту мы решили немного подкрутить.</p><button class="create-button" id="create-button" type="button"><span>✧</span> СОЗДАТЬ ВСЕЛЕННУЮ <b>↗</b></button><div class="intro-note"><i></i> ДЛЯ ДВОИХ · БЕЗ КОНЦА · С НЕБОЛЬШОЙ ВЕРОЯТНОСТЬЮ КОТА</div></section>
+
+  <section class="universe hidden" id="universe" aria-live="polite">
+    <div class="universe-head"><div><div class="world-overline"><span class="pulse-dot"></span> НОВАЯ РЕАЛЬНОСТЬ ОБНАРУЖЕНА</div><h2 id="world-name"></h2></div><div class="world-code">КООРДИНАТЫ<br><b id="world-code"></b></div></div>
+    <div class="rare-banner hidden" id="rare-banner"><span>✧</span><div><strong>РЕДКАЯ ВСЕЛЕННАЯ ОБНАРУЖЕНА</strong><small>Шанс на одно создание — 5%, то есть примерно 1 к 20.</small></div><span>✧</span></div>
+    <div class="planet-panel">
+      <div class="planet-visual"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="planet-globe" id="planet-globe"><span id="planet-glyph">✳</span></div><span class="orbit-moon"></span><div class="planet-caption">ПЛАНЕТА ОСОБОГО НАЗНАЧЕНИЯ</div></div>
+      <div class="planet-info"><div class="panel-label"><span>01</span> ГЛАВНАЯ ПЛАНЕТА</div><h3 id="planet-name"></h3><div class="planet-facts"><div><span>КЛИМАТ</span><b id="climate"></b></div><div><span>НАСЕЛЕНИЕ</span><b id="population"></b></div><div><span>ГРАВИТАЦИЯ</span><b><i id="gravity"></i>%</b></div><div><span>ОСНОВНОЙ РЕСУРС</span><b id="resource"></b></div></div></div>
+    </div>
+    <div class="meter-grid"><div class="meter-panel"><div class="meter-title"><span>02 / СРЕДА</span><b>УРОВЕНЬ ХАОСА <strong id="chaos-value"></strong></b></div><div class="segments" id="chaos-segments" aria-hidden="true"></div><div class="meter-caption"><span id="chaos-label"></span><span>НЕСТАБИЛЬНОСТЬ</span></div></div><div class="meter-panel cozy-panel"><div class="meter-title"><span>03 / АТМОСФЕРА</span><b>УРОВЕНЬ УЮТА <strong id="cozy-value"></strong></b></div><div class="segments" id="cozy-segments" aria-hidden="true"></div><div class="meter-caption"><span id="cozy-label">МОЖНО ОСТАТЬСЯ</span><span>ТЕПЛОТА</span></div></div></div>
+    <div class="content-grid">
+      <section class="laws-panel"><div class="panel-label"><span>04</span> ЛОКАЛЬНЫЕ ЗАКОНЫ ФИЗИКИ <small id="law-count"></small></div><ol id="laws-list"></ol></section>
+      <section class="artifact-panel"><div class="panel-label"><span>05</span> КЛЮЧЕВОЙ ОБЪЕКТ</div><div class="artifact-content"><div class="artifact-icon" id="artifact-icon"></div><div><h3 id="artifact-name"></h3><p id="artifact-description"></p></div></div><div class="artifact-stamp">ОБЪЕКТ<br>НЕИЗЪЯТНЫЙ</div></section>
+    </div>
+    <section class="forecast-panel"><div class="forecast-mark">⌁</div><div><div class="panel-label"><span>06</span> ПРОГНОЗ</div><h3 id="forecast-title"></h3><p id="forecast-text"></p><small id="forecast-threat"></small></div><div class="forecast-coordinate" id="forecast-coordinate"></div></section>
+    <div class="universe-footer"><p>❤️ Эту вселенную Алексей оставляет себе.</p><button class="create-button secondary" id="again-button" type="button"><span>↻</span> СОЗДАТЬ ЕЩЁ <b>↗</b></button></div>
+  </section>
+  <footer class="footer"><span>ПРОСТРАНСТВО ВОЗНИКАЕТ ПО НАЖАТИЮ</span><span>∞</span><span>СОБРАНО ВРУЧНУЮ, СЛУЧАЙНО</span></footer>
+</main>
+<div class="history-backdrop hidden" id="history-backdrop"><aside class="history-drawer" role="dialog" aria-modal="true" aria-labelledby="history-title"><div class="history-head"><div><div class="panel-label"><span>ЛОГ</span> ЛИЧНАЯ КАРТОТЕКА</div><h2 id="history-title">История миров</h2></div><button id="history-close" type="button" aria-label="Закрыть историю">×</button></div><p class="history-caption">Три последних создания. Обновишь страницу — исчезнут.</p><ol id="history-list"></ol><div class="history-empty" id="history-empty">Пока тут тихо.<br>Создай первую вселенную.</div><div class="drawer-foot">ТОЛЬКО В ЭТОЙ ВКЛАДКЕ <span>✳</span></div></aside></div>
+</body>
+</html>
